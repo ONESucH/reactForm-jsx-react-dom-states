@@ -1,0 +1,68 @@
+@import '../../librares.global.less';
+@import '../../aliases.less';
+@import '../../styles.less';
+@import './main.component.less';
+@import './main.component.adaptive.less';
+
+/* Шпаблоны */
+.form {
+  position: relative;
+  .a-column;
+  .a-stretch;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  label, input {
+    outline: none;
+  }
+  label {
+    position: relative;
+    display: flex;
+    .a-stretch;
+  }
+  input {
+    flex-grow: 1;
+    padding: 10px 5px;
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #000;
+    border-radius: 2px;
+    &::-webkit-input-placeholder {
+      color: silver;
+    }
+    &::-moz-placeholder {
+      color: silver;
+    }
+    &:-ms-input-placeholder {
+      color: silver;
+    }
+    &:-moz-placeholder {
+      color: silver;
+    }
+  }
+  input[type=submit] {
+    background: #ffdb2d;
+    opacity: .8;
+    transition: 1s;
+    border-top: none;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+      background: lawngreen;
+    }
+  }
+}
+/* ------------ */
+
+.app-Main {
+  border-radius: 6px;
+  transform: rotate(0deg) rotateY(360deg) rotateZ(360deg);
+  transition: 10s;
+  text-align: center;
+  height: 100vh;
+}
