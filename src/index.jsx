@@ -8,6 +8,7 @@ import HeaderComponent from './app/Header/Header.component';
 import MainComponent from './app/Main/Main.component';
 import FooterComponent from './app/Footer/Footer.component';
 import CarsComponent from './app/Cars/Cars.component';
+import UsersComponent from './app/Users/Users.component';
 
 /* Стили */
 import './index.less';
@@ -23,6 +24,7 @@ export default class Root extends React.Component {
                     <Switch>
                         <Route exact path='/' component={MainComponent} />
                         <Route path='/cars' component={CarsComponent} />
+                        <Route path='/users' component={UsersComponent} />
                     </Switch>
 
                     <FooterComponent />

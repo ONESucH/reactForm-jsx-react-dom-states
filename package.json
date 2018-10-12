@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "g": "cd .\\src\\app && create-react-file",
-    "template": "mkdir .\\src\\app\\template\\ | touch .\\src\\app\\template\\template.jsx | touch .\\src\\app\\template\\template.adaptive.less | touch .\\src\\app\\template\\template.less"
+    "g": "cd .\\src\\app && react-components-jsx-less"
   },
   "keywords": [
     "react",
@@ -36,6 +35,8 @@
     "babel-loader": "^8.0.2",
     "babel-polyfill": "^6.26.0",
     "base64-inline-loader": "^1.1.1",
+    "change-case": "^3.0.2",
+    "commander": "^2.18.0",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
@@ -48,6 +49,7 @@
     "less-plugin-autoprefix": "^2.0.0",
     "less-plugin-clean-css": "^1.5.1",
     "react": "^16.5.1",
+    "react-components-jsx-less": "^1.0.2",
     "react-dom": "^16.5.1",
     "react-router-dom": "^4.3.1",
     "style-loader": "^0.23.0",
