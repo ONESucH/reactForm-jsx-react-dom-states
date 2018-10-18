@@ -4,3 +4,108 @@
 @import './users.component.less';
 @import './users.component.adaptive.less';
 
+
+/* Loader */
+.main-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+.loader {
+  position: relative;
+  height: 5px;
+  max-height: 5px;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid rgba(30, 199, 238, 0.18);
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: calc(-10%);
+    width: 10%;
+    height: 100%;
+    background: greenyellow;
+    max-height: 100%;
+    animation: move 10s infinite ease;
+  }
+}
+/* ------------ */
+
+h3 {
+  text-align: center;
+  border-bottom: 2px solid cornflowerblue;
+  color: #1c1c1c;
+  text-shadow: 0 0 3px #3effe6;
+}
+
+.app-Users {
+  padding: 10vh 2vw;
+  min-height: 100vh;
+  animation: animation 10s infinite ease;
+  background: rgba(255, 255, 255);
+}
+
+.users {
+  background: silver;
+  width: 100%;
+  color: #1c1c1c;
+  text-shadow: 0 0 3px #3effe6;
+}
+
+// /Анимация для loader
+@keyframes move {
+  0% {
+    background: greenyellow;
+    box-shadow: 0 0 10px 0 greenyellow;
+  }
+  25% {
+    background: #4092ff;
+    box-shadow: 0 0 10px 0 #4092ff;
+  }
+  50% {
+    background: greenyellow;
+    box-shadow: 0 0 10px 0 greenyellow;
+  }
+  75% {
+    background: #ff4b3f;
+    box-shadow: 0 0 10px 0 #ff4b3f;
+  }
+  100% {
+    left: calc(110%);
+    background: greenyellow;
+    box-shadow: 0 0 10px 0 greenyellow;
+  }
+}
+
+// Анимация для фона
+@keyframes animation {
+  0% {
+    background: rgba(255, 255, 255, 0.20);
+  }
+  59% {
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: none;
+  }
+  60% {
+    background: rgba(175, 132, 118, 0.4);
+    box-shadow: 0 0 15px 0 deepskyblue;
+  }
+  60.5% {
+    background: rgba(255, 255, 255, 0.20);
+  }
+  61% {
+    background: rgba(175, 132, 118, 0.4);
+    box-shadow: 0 0 15px 0 deepskyblue;
+  }
+  61.5% {
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: none;
+  }
+  100% {
+    background: rgba(255, 255, 255, 0.20);
+  }
+}
