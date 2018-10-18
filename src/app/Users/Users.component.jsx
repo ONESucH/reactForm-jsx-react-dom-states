@@ -3,6 +3,12 @@ import React from 'react';
 /* Стили */
 import './Users.component.less';
 
+/* Компоненты */
+import CarsComponent from '../Cars/Cars.component';
+
+/* Переменные */
+let User = new CarsComponent;
+
 export default class UsersComponent extends React.Component {
 
     constructor(props) {
@@ -18,14 +24,7 @@ export default class UsersComponent extends React.Component {
             this.setState({loader: false})
         };
         
-        console.log(JSON.stringify(this.props.name));
-        
-        this.getDataComponent = this.getDataComponent.bind(this);
-    }
-    
-    getDataComponent(props) {
-        console.log('Запустили');
-        console.log('props', props);
+        console.log('Урааа вытащили из другой компоненты ', User.done);
     }
 
     render() {
@@ -37,10 +36,11 @@ export default class UsersComponent extends React.Component {
                     </div>
                 ) : false }
                 <div className="users">
-                    <h3>
-                        Получили данные из другой компоненты?
-                    </h3>
-                    {this.props.name}
+                    <h3>Получили данные из другой компоненты?</h3><br /><br />
+                    {JSON.stringify(User.done)}
+                </div>
+                <div className="timer"><br /><br />
+                    <p>Сейчас на часах: {(new Date()).toString()}</p>
                 </div>
             </div>
         )

@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom';
 /* Стили */
 import './Cars.component.less';
 
-/* Компоненты */
-import UsersComponent from '../Users/Users.component';
-
 export default class CarsComponent extends React.Component {
 
     constructor(props) {
@@ -24,6 +21,11 @@ export default class CarsComponent extends React.Component {
             gamer: 'Володя'
         }
     }
+
+    get done() {
+        /*return this.state.user === [] ? 'Данных нет' : 'данные есть';*/
+        return this.state.user;
+    }
     
     render() {
         return (
@@ -31,14 +33,12 @@ export default class CarsComponent extends React.Component {
                 <h4>Передача данных в другую компоненту</h4>
                 <p>Увидим результат {this.state.gamer}</p><br /><br />
                 
-                /* Придумали свой props, чтобы в другой компоненте его вызвать(Строка обязательна!) */
-                <UsersComponent obj={this.state.user} />
-                <br /><Link to="/users">Передать данные debugger другую компоненту</Link>
+                <br /><Link to="/users">Перейти в другую компоненту</Link>
                 <h4>Пример цикла</h4><br />
                 <ul>/* нужна переменная с массивом */
                     {this.state.user.map((item, index) => {
                         return (
-                            <li>{index}: {item.name}</li>
+                            <li key={index}>{index}: {item.name}</li>
                         )
                     })}
                 </ul>
