@@ -9,6 +9,7 @@ import MainComponent from './app/Main/Main.component';
 import FooterComponent from './app/Footer/Footer.component';
 import CarsComponent from './app/Cars/Cars.component';
 import UsersComponent from './app/Users/Users.component';
+import EventsComponent from './app/Events/Events.component';
 
 /* Стили */
 import './index.less';
@@ -25,6 +26,7 @@ export default class Root extends React.Component {
                         <Route exact path='/' component={MainComponent} />
                         <Route path='/cars' component={CarsComponent} />
                         <Route path='/users' component={UsersComponent} />
+                        <Route path='/events' component={EventsComponent} />
                     </Switch>
 
                     <FooterComponent />

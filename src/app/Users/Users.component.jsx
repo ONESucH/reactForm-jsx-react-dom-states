@@ -1,5 +1,6 @@
 /* Модули */
 import React from 'react';
+import Link from 'react-router-dom/es/Link';
 /* Стили */
 import './Users.component.less';
 
@@ -42,6 +43,7 @@ export default class UsersComponent extends React.Component {
                 <div className="timer"><br /><br />
                     <p>Сейчас на часах: {(new Date()).toString()}</p>
                 </div>
+                <Link to={'/events'}>Посмотреть пример с ивентами</Link>
             </div>
         )
     }
